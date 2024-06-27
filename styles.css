@@ -5,13 +5,14 @@ html {
 
 .sidebar {
     position: fixed;
-    background-color: #15191C;
+    background: #1F2232;
     width: 90px;
     top: 0;
     left: 0;
     bottom: 0;
     overflow-y: auto;
     z-index: 999;
+
 }
 
 .sidebar-icon .sdicon {
@@ -22,7 +23,27 @@ html {
     list-style-type: none;
 }
 
+.sidebar-section-top {
+    width: 40px;
+    height: 296px;
+    top: 24px;
+    left: 12px;
+    gap: 24px;
+    opacity: 0px;
+
+}
+
 .sidebar-section-bottom {
     position: absolute;
-    bottom:0;
+    bottom: 0;
+}
+
+.sdicon {
+    width: 40px;
+    height: 40px;
+    padding: 8px 0px 0px 0px;
+    gap: 8px;
+    border-radius: 8px 0px 0px 0px;
+    opacity: 0px;
+
 }
