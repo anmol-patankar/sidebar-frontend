@@ -2,19 +2,27 @@ html {
     position: relative;
     min-height: 100%;
 }
+
 .sidebar {
-        position: fixed;
-        background-color: #15191C;
-        width: 90px;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        overflow-y: auto;
-        z-index: 999;
-       }
+    position: fixed;
+    background-color: #15191C;
+    width: 90px;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    overflow-y: auto;
+    z-index: 999;
+}
+
 .sidebar-icon .sdicon {
-                      color: #fff;
-                     }
+    color: #fff;
+}
+
 .sidebar-icon li {
-                 list-style-type: none;
-                }
+    list-style-type: none;
+}
+
+.sidebar-section-bottom {
+    position: absolute;
+    bottom:0;
+}
