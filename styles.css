@@ -56,7 +56,9 @@ body {
 }
 
 .sdicon .icon-img:focus{
-    border: 2px solid blue;
+    outline:none;
+    border: 2px solid #136FDF;
+    border-radius: 8px;
 }
 .sdicon:hover {
     background-color: #353846;
