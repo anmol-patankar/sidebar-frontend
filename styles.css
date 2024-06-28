@@ -35,16 +35,29 @@ body {
 
 .sdicon {
     width: 40px;
-     height: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 12px;
     border-radius: 8px;
     transition: background-color 0.3s, border-color 0.3s;
-    position: relative; /* Needed for tooltip positioning */
+    position: relative;
+    cursor: pointer;
 }
 
+.sdicon a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.sdicon:hover,
+.sdicon:focus {
+    background-color: #353846;
+}
 .sdicon:hover {
     background-color: #353846;
 }
@@ -66,9 +79,9 @@ body {
     color: #fff;
     text-align: center;
     border-radius: 5px;
-    padding: 12px 16px 12px 16px;
+    padding: 12px 16px;
     position: absolute;
-    z-index: 1000; /* Increased z-index */
+    z-index: 1000;
     left: 52px; 
     top: 50%;
     transform: translateY(-50%);
@@ -76,12 +89,14 @@ body {
     opacity: 0;
     transition: opacity 0.3s, visibility 0.3s;
     margin-left: 10px;
+    pointer-events: none;
 }
 
-.sdicon:hover .tooltip {
+.sdicon:hover .tooltip,
+.sdicon:focus .tooltip {
     visibility: visible;
     opacity: 1;
-    transition-delay: 0.5s; /* Add a small delay for smoother appearance */
+    transition-delay: 0.1s;
 }
 
 
