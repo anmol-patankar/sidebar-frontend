@@ -12,10 +12,29 @@ body {
     display: flex;
     flex-direction: column;
     height: 100vh;
-    overflow-y: auto;
+    overflow-y: visible;
 
 }
-
+.sdicon .tooltip {
+    visibility: hidden;
+    width: auto;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 10px;
+    position: absolute;
+    z-index: 1;
+    left: 125%;
+    opacity: 0;
+    transition: opacity 0.3s;
+    white-space: nowrap; 
+  }
+  
+  .sdicon:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
 .sidebar-icon .sdicon {
     color: #fff;
 }
@@ -35,9 +54,12 @@ body {
     bottom: 0;
 }
 
+
 .sdicon {
     width: 40px;
     height: 40px;
+    position: relative;
+    /* display: inline-block; */
     /* border: 2px solid #fff; */
     display: flex;
     justify-content: center;
@@ -45,7 +67,7 @@ body {
     margin-bottom: 12px;
     border-radius: 8px; /* Optional: for rounded corners */
     transition: background-color 0.3s, border-color 0.3s;
-}
+} 
 
 .sdicon:hover {
     background-color: #353846;
