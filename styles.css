@@ -44,6 +44,7 @@ body {
     transition: background-color 0.3s, border-color 0.3s;
     position: relative;
     cursor: pointer;
+    outline: none; 
 }
 
 .sdicon a {
@@ -54,9 +55,8 @@ body {
     height: 100%;
 }
 
-.sdicon:hover,
-.sdicon:focus {
-    background-color: #353846;
+.sdicon .icon-img:focus{
+    border: 2px solid blue;
 }
 .sdicon:hover {
     background-color: #353846;
