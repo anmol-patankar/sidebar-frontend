@@ -71,6 +71,13 @@ body {
 #sdicon-profile {
     border-radius: 50%;
 }
+.sdicon:hover img {
+    filter: brightness(0) invert(1); /* Example: Inverts the color, you can customize as needed */
+}
+
+.sdicon-active img {
+    filter: brightness(0) invert(1); /* Example: Inverts the color, you can customize as needed */
+}
 
 .tooltip {
     visibility: hidden;
