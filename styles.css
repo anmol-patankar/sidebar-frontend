@@ -1,3 +1,4 @@
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -12,7 +13,6 @@ body {
     flex-direction: column;
     height: 100vh;
     overflow-y: visible;
-
 }
 
 .sidebar-icon .sdicon {
@@ -64,20 +64,21 @@ body {
 #sdicon-profile:focus-within {
     border-radius: 50%;
 }
+
 .sdicon:hover {
     background-color: #353846;
 }
-.sdicon:focus-within{
+
+.sdicon:focus-within {
     background-color: #353846;
 }
 
 .sdicon-active {
-    background-color: #136FDF;
+    background-color: #136FDF !important;
 }
 
 .sdicon-active:hover {
-    background-color: #136FDF;
-    /* Same as the active state background */
+    background-color: #136FDF !important;
 }
 
 #sdicon-profile {
@@ -91,8 +92,6 @@ body {
 .sdicon-active img:not(.profile-img img) {
     filter: brightness(0) invert(1);
 }
-
-
 .tooltip {
     visibility: hidden;
     width: auto;
@@ -113,21 +112,24 @@ body {
     pointer-events: none;
     box-shadow: 0px 2px 4px 0px rgba(141, 154, 169, 0.24);
 }
-
-.sdicon:hover .tooltip,
-.sdicon:focus .tooltip {
+.sdicon:hover:not(.sdicon-active) .tooltip,
+.sdicon:focus:not(.sdicon-active) .tooltip,
+.sdicon:focus-within:not(.sdicon-active) .tooltip {
     visibility: visible;
     opacity: 1;
     transition-delay: 0.1s;
 }
 
-
-.sdicon:focus-within .tooltip {
-    visibility: visible;
-    opacity: 1;
-    transition-delay: 0.1s;
+.sdicon-active .tooltip {
+    visibility: hidden !important;
+    opacity: 0 !important;
 }
 
-.icon-img:focus-visible{
+.sdicon-active,
+.sdicon-active:hover {
+    background-color: #136FDF !important;
+}
+
+.icon-img:focus-visible {
     outline: none;
 }
